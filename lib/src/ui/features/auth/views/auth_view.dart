@@ -139,6 +139,95 @@ class AuthView extends StatelessWidget {
                       ],
                     );
                   }),
+                  Expanded(
+                    child: Center(
+                      child: Container(
+                        constraints: BoxConstraints(maxWidth: 600),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(40),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: colorScheme.primary.withOpacity(0.2),
+                                  width: 2,
+                                ),
+                              ),
+                              child: Image.asset(
+                                'assets/img/tapas.png',
+                                scale: 6,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                            ),
+                            SizedBox(height: 24),
+
+                            Text(
+                              'welcome'.tr,
+                              style: TextStyle(
+                                color: colorScheme.primary,
+                                fontSize: size.width * 0.02,
+                                letterSpacing: 4,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                            SizedBox(height: 3),
+
+                            Text(
+                              'Nexunid',
+                              style: TextStyle(
+                                color: colorScheme.primary,
+                                fontSize: size.width * 0.1,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 1,
+                              ),
+                            ),
+                            SizedBox(height: 28),
+                            // Login Button
+                            SizedBox(
+                              width: 200,
+                              height: 48,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: colorScheme.primary,
+                                  foregroundColor: colorScheme.onPrimary,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  elevation: 0,
+                                ),
+                                child: Text(
+                                  'login'.tr,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 16),
+
+                            TextButton(
+                              onPressed: () => Get.toNamed('/register'),
+                              style: TextButton.styleFrom(
+                                foregroundColor: colorScheme.primary,
+                              ),
+                              child: Text(
+                                'register_prompt'.tr,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

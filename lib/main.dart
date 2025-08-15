@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:nexunid/src/app.dart';
+import 'package:nexunid/src/core/controllers/language_controller.dart';
 import 'package:nexunid/src/core/controllers/theme_controller.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -24,6 +25,7 @@ void main() async {
 
   await GetStorage.init();
   Get.put(ThemeController());
+  Get.put(LanguageController());
 
   runApp(App());
 }

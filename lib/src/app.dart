@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nexunid/src/core/bindings/app_binding.dart';
+import 'package:nexunid/src/core/controllers/language_controller.dart';
 import 'package:nexunid/src/core/controllers/theme_controller.dart';
+import 'package:nexunid/src/core/languages/app_traslation.dart';
 import 'package:nexunid/src/core/routes/routes.dart';
 
 class App extends StatelessWidget {
@@ -20,6 +22,9 @@ class App extends StatelessWidget {
         initialBinding: AppBinding(),
         initialRoute: Routes.splash,
         getPages: Routes.appRoutes(),
+        translations: AppTranslations(),
+        locale: Get.find<LanguageController>().currentLocale.value,
+        fallbackLocale: Locale('es', 'ES'),
       ),
     );
   }
