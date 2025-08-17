@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nexunid/src/core/controllers/language_controller.dart';
 import 'package:nexunid/src/core/controllers/theme_controller.dart';
+import 'package:nexunid/src/ui/features/auth/views/auth_login_view.dart';
 
 class AuthView extends StatelessWidget {
   const AuthView({super.key});
@@ -167,12 +168,12 @@ class AuthView extends StatelessWidget {
                               'welcome'.tr,
                               style: TextStyle(
                                 color: colorScheme.primary,
-                                fontSize: size.width * 0.02,
-                                letterSpacing: 4,
-                                fontWeight: FontWeight.w300,
+                                fontSize: size.width * 0.025,
+
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
-                            SizedBox(height: 3),
+                            SizedBox(height: 1),
 
                             Text(
                               'Nexunid',
@@ -189,7 +190,7 @@ class AuthView extends StatelessWidget {
                               width: 200,
                               height: 48,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () => login(context),
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: colorScheme.primary,
                                   foregroundColor: colorScheme.onPrimary,
