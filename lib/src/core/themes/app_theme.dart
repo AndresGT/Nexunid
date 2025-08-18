@@ -28,7 +28,7 @@ abstract final class AppThemes {
   static const Color errorDark = Color(0xFFF87171); // Red 400
 
   // --- Background and Surface Colors ---
-  static const Color backgroundLight = Color(0xFFF8FAFC); // Slate 50
+  static const Color backgroundLight = Color(0xFFF1F5F9); // Slate 50
   static const Color backgroundDark = Color(0xFF0F172A); // Slate 900
   static const Color surfaceLight = Color(0xFFFFFFFF); // White
   static const Color surfaceDark = Color(0xFF1E293B); // Slate 800
@@ -104,7 +104,6 @@ abstract final class AppThemes {
         shadowColor: Colors.black.withOpacity(0.2),
       ),
 
-      
       chipTheme: ChipThemeData(
         backgroundColor: surfaceVariant,
         labelStyle: TextStyle(color: onSurface),
@@ -114,7 +113,10 @@ abstract final class AppThemes {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: surfaceVariant,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 12,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
@@ -135,7 +137,9 @@ abstract final class AppThemes {
           backgroundColor: primary,
           foregroundColor: onPrimary,
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
           elevation: 0,
         ),
       ),
@@ -146,14 +150,13 @@ abstract final class AppThemes {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
-      
+
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: primary,
         foregroundColor: onPrimary,
         elevation: 2,
         highlightElevation: 4,
       ),
-      
     );
   }
 

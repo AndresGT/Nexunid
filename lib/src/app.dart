@@ -20,7 +20,7 @@ class App extends StatelessWidget {
             ? ThemeMode.dark
             : ThemeMode.light,
         initialBinding: AppBinding(),
-        initialRoute: Routes.splash,
+        initialRoute: Routes.home ,
         getPages: Routes.appRoutes(),
         translations: AppTranslations(),
         locale: Get.find<LanguageController>().currentLocale.value,
