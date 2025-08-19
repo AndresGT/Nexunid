@@ -2,7 +2,8 @@ import 'package:get/get.dart';
 import 'package:nexunid/src/ui/features/auth/views/auth_login_view.dart';
 import 'package:nexunid/src/ui/features/auth/views/auth_register_view.dart';
 import 'package:nexunid/src/ui/features/auth/views/auth_view.dart';
-import 'package:nexunid/src/ui/features/home/views/home_view.dart';
+import 'package:nexunid/src/ui/features/layout/bindings/layout_binding.dart';
+import 'package:nexunid/src/ui/features/layout/views/layout_view.dart';
 import 'package:nexunid/src/ui/features/splash/bindings/splsh_bindings.dart';
 import 'package:nexunid/src/ui/features/splash/views/splash_view.dart';
 
@@ -19,7 +20,7 @@ class Routes {
       GetPage(name: auth, page: () => AuthView()),
       GetPage(name: login, page: () => AuthLoginView()),
       GetPage(name: register, page: () => AuthRegisterView()),
-      GetPage(name: home, page: ()=>HomeView())
+      GetPage(name: home, page: () => HomeView(), binding: LayoutBinding()),
     ];
   }
 }

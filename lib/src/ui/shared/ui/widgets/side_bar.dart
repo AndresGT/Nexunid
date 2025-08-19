@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nexunid/src/ui/features/layout/controllers/layout_controller.dart';
 import 'package:nexunid/src/ui/shared/ui/buttons/buttons_menu.dart';
 
 class SideBar extends StatelessWidget {
@@ -49,12 +51,16 @@ class SideBar extends StatelessWidget {
           ButtonsMenu(
             title: 'home',
             icon: Icons.home_rounded,
-            onPressed: () {},
+            onPressed: () {
+              Get.find<LayoutController>().selectedIndex.value = 0;
+            },
           ),
           ButtonsMenu(
             title: 'Profile',
             icon: Icons.person_rounded,
-            onPressed: () {},
+            onPressed: () {
+              Get.find<LayoutController>().selectedIndex.value = 1;
+            },
           ),
           Divider(
             color: colorScheme.primary.withOpacity(0.5),
