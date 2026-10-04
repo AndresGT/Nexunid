@@ -4,6 +4,7 @@ import 'package:nexunid/src/core/bindings/app_binding.dart';
 import 'package:nexunid/src/core/controllers/language_controller.dart';
 import 'package:nexunid/src/core/languages/app_translation.dart';
 import 'package:nexunid/src/core/routes/app_routes.dart';
+import 'package:nexunid/src/core/themes/app_theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -15,6 +16,7 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Nexunid',
         initialBinding: AppBinding(),
+        theme: AppThemes.collections['dark'],
         initialRoute: AppRoutes.splash,
         getPages: AppRoutes.appRoutes(),
         translations: AppTranslations(),

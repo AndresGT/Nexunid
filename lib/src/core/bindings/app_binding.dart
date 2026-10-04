@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
-import 'package:nexunid/src/core/controllers/language_controller.dart';
+
+import '../controllers/language_controller.dart';
+import '../controllers/theme_controller.dart';
 
 class AppBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<LanguageController>(() => LanguageController());
+    Get.put<LanguageController>(LanguageController(), permanent: true);
+    Get.put<ThemeController>(ThemeController(), permanent: true);
   }
 }
